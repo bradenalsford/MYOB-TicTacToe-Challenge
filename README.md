@@ -16,7 +16,7 @@ Once Python is installed, you can run the application as follows, based on your 
  - Open Terminal.
  - Navigate to directory containing Application.py.
  - Ensure the file has permissions to be executed.
- - Run `python ./Application.py`
+ - Run `python3 ./Application.py`
 
 ### Windows
  - Open Command Prompt.
@@ -27,6 +27,8 @@ Once Python is installed, you can run the application as follows, based on your 
  - Open the Terminal program.
  - Navigate to the directory containing Application.py.
  - Run `python ./Application.py`
+ 
+If the application runs, but has input errors, you may be running with Python 2. Ensure that python3 is set as default.
 
 Once the app is running, it should look as follows:
 ![
