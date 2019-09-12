@@ -66,9 +66,9 @@ class Command_Line:
     def play_again(self):
         """Returns if the players would like to play again."""
         valid_input = ["y", "n", "yes", "no", "q"]
-        answer = input("\nWould you like to play again? (y/n)\n")
+        answer = input("\nWould you like to play again? (y/n)\n").lower()
 
-        while answer.lower() not in valid_input:
+        while answer not in valid_input:
             print("\nSorry, I don't know what you mean...")
             answer = input("Would you like to play again? (y/n)\n")
 
