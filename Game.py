@@ -39,7 +39,7 @@ class Game:
         row = move[0] - 1
         col = move[1] - 1
         
-        # Check veritical
+        # Check vertical
         if self.board[0][col] == self.board[1][col] == self.board[2][col]:
             self.complete = True
             self.winner = self.current_player

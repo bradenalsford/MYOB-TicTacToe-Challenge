@@ -1,12 +1,14 @@
 class Command_Line:
-    """Command Line Interfece that user interacts with."""
+    """Command Line Interface that user interacts with."""
 
-    def start_new_game(self):
+    @staticmethod
+    def start_new_game():
         """Displays the welcome messages."""
         print("\nWelcome to Tic Tac Toe!")
         print("You may enter 'q' at any time to quit.\n")
         
-    def show_board(self, board, final_board):
+    @staticmethod
+    def show_board(board, final_board):
         """Displays a given board"""
         if final_board:
             print("The final board looks like this!")
@@ -17,7 +19,8 @@ class Command_Line:
         print(board[1][0] + ' ' + board[1][1] + ' ' + board[1][2])
         print(board[2][0] + ' ' + board[2][1] + ' ' + board[2][2] + '\n')
 
-    def valid_move_input(self, move):
+    @staticmethod
+    def valid_move_input(move):
         """Helper function that checks and returns if a given move is valid"""
         if move == "q":
             return True
@@ -50,20 +53,23 @@ class Command_Line:
         if move == "q":
             return move
 
-        return (int(move[0]), int(move[2]))
+        return int(move[0]), int(move[2])
 
-    def move_already_taken(self):
+    @staticmethod
+    def move_already_taken():
         """Gives feedback that a move is already taken."""
         print("\nThat move is already taken! Please choose another.")
 
-    def end_game(self, winner):
+    @staticmethod
+    def end_game(winner):
         """Displays the end game message."""
         if winner != None:
             print("\nPlayer {} wins!".format(winner))
         else:
             print("\nThis game was a draw!")
 
-    def play_again(self):
+    @staticmethod
+    def play_again():
         """Returns if the players would like to play again."""
         valid_input = ["y", "n", "yes", "no", "q"]
         answer = input("\nWould you like to play again? (y/n)\n").lower()
@@ -77,6 +83,7 @@ class Command_Line:
         else:
             return False
 
-    def quit(self):
+    @staticmethod
+    def quit():
         """Displays the quit message."""
         print("\nThanks for playing!")

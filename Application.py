@@ -6,11 +6,11 @@ from Game import Game
 class Application:
     """Controls the connection between gameflow and the command line interface."""
     
-    def leave_game(self, client):
+    @staticmethod
+    def leave_game(client):
         """Helper function that takes the client and closes the game"""
         client.quit()
         sys.exit()
-
 
     def run(self):
         """Runs games of Tic Tac Toe"""
